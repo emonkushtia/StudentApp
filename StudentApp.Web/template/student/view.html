@@ -1,0 +1,66 @@
+﻿<section class="contact-body box-right visible">
+    <div class="vbox">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid data-read">
+                <div class="navbar-header">
+                    <a href="#/students"  class="navbar-brand"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <span class="navbar-brand">{{StudentView.student.name}}</span>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0)" ng-click="StudentView.deleteStudent(StudentView.student.id)"><span class="glyphicon glyphicon-remove-circle"></span> Delete</a></li>
+                    <li><a href="#/student/edit/{{StudentView.student.id}}" ><span class="glyphicon glyphicon-edit"></span> Edit</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row-row">
+            <div class="cell">
+                <div class="cell-inner">
+                    <form class="contact-list contact-content">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <div class="data-read">
+                                <p>{{StudentView.student.name}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <div class="data-read">
+                                <p><a href="tel:01888888888">{{StudentView.student.phone}}</a></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <div class="data-read">
+                                <p><a href="mailto:john.doe@email">{{StudentView.student.email}}</a></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Organization</label>
+                            <div class="data-read">
+                                <div>{{StudentView.student.organization}}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Address</label>
+                            <div class="data-read">
+                                <div>{{StudentView.student.house}}</div>
+                                <div>{{StudentView.student.street}}</div>
+                                <div>{{StudentView.student.city}}</div>
+                                <div>{{StudentView.student.postBox}}</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Courses</label>
+                            <div class="data-read">
+                                <div ng-repeat="course in StudentView.student.courseItems">
+                                    {{course.name}}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

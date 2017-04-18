@@ -1,0 +1,78 @@
+﻿<section class="contact-body box-right visible">
+    <div class="vbox">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid data-input">
+                <div class="navbar-header">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+                        <a href="#/students" class="btn btn-default" role="button"><span class="glyphicon glyphicon-remove"></span> Cancel</a>
+                        <a href="javascript:void(0)" class="btn btn-default" role="button"><span class="glyphicon glyphicon-ok"></span> Done</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row-row">
+            <ul>
+                <li ng-repeat="msg in StudentCreate.errorMessage">
+                    {{msg}}
+                </li>
+            </ul>
+            <div class="cell">
+                <div class="cell-inner">
+                    <form name="studentForm" ng-submit="StudentCreate.submitForm()" novalidate class="contact-list contact-content">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <div class="data-input">
+                                <input ng-model="StudentCreate.student.name" name="name" type="text" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <div class="data-input">
+                                <input ng-model="StudentCreate.student.phone" name="phone" type="text" class="form-control" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <div class="data-input">
+                                <input ng-model="StudentCreate.student.email" name="email" type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Organization</label>
+                            <div class="data-input">
+                                <input ng-model="StudentCreate.student.organization" name="organization" type="text" class="form-control" placeholder="Organization Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Address</label>
+                            <div class="data-input">
+                                <input ng-model="StudentCreate.student.house" name="house" type="text" class="form-control" placeholder="House">
+                                <input ng-model="StudentCreate.student.street" name="street" type="text" class="form-control" placeholder="Street">
+                                <input ng-model="StudentCreate.student.postBox" name="postBox" type="text" class="form-control" placeholder="PO box">
+                                <input ng-model="StudentCreate.student.city" name="city" type="text" class="form-control" placeholder="City">
+                                <input ng-model="StudentCreate.student.zipCode" name="zipCode" type="text" class="form-control" placeholder="ZIP code">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!--<label class="form-label">Courses</label>-->
+                            <div class="data-input">
+                                <!--Course -->
+                                <!--<div class="form-group clearfix">
+                                    <label ng-repeat="item in StudentCreate.courses">
+                                        <input type="checkbox" name="selectedCourseItem" ng-value="item.value" ng-model="item.selected" ng-change="StudentCreate.selectCourse()"/>
+                                        <span class="space-margin5">
+                                            {{item.name}}
+                                        </span>
+                                    </label>
+                                </div>-->
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
